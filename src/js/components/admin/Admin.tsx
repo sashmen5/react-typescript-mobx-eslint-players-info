@@ -1,8 +1,6 @@
 import * as React from 'react';
 
-import ManagePlayers from './ManagePlayers';
-import ManageHeadToHeads from './ManageHeadToHeads';
-import ManageGames from './ManageGames';
+import {ManageGames, ManageHeadToHeads, ManagePlayers} from '.'
 
 class Admin extends React.Component<any, any> {
     render() {
