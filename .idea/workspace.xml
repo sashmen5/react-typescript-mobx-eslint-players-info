@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff46e3a2-26dd-450e-89aa-21ecd87ff697" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/components/NavBar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/NavBar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/components/admin/ManagePlayers.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/admin/ManagePlayers.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/components/admin/forms/AddPlayerForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/admin/forms/AddPlayerForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/components/admin/forms/PlayerRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/admin/forms/PlayerRow.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/utils/firebase.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/utils/firebase.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/stores/ViewStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/stores/ViewStore.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -18,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Admin.tsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/components/admin/Admin.tsx">
+      <file leaf-file-name="ManagePlayers.tsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/components/admin/ManagePlayers.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+            <state relative-caret-position="486">
+              <caret line="27" column="49" lean-forward="true" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -30,11 +33,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ManagePlayers.tsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/components/admin/ManagePlayers.tsx">
+      <file leaf-file-name="PlayerRow.tsx" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/js/components/admin/forms/PlayerRow.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+            <state relative-caret-position="222">
+              <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NavBar.tsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/components/NavBar.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="20" column="58" lean-forward="true" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -45,10 +60,10 @@
       <file leaf-file-name="ViewStore.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/stores/ViewStore.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="24" column="34" lean-forward="true" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+            <state relative-caret-position="87">
+              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
               <folding>
-                <element signature="e#0#50#0" expanded="true" />
+                <element signature="e#0#62#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -66,8 +81,8 @@
       <file leaf-file-name="AddPlayerForm.tsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/components/admin/forms/AddPlayerForm.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+            <state relative-caret-position="378">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="27" selection-end-column="6" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -75,11 +90,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.d.ts" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/node_modules/mobx-react/index.d.ts">
+      <file leaf-file-name="firebase.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/utils/firebase.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+            <state relative-caret-position="290">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -111,18 +126,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.tsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/App.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="29" column="25" lean-forward="true" selection-start-line="29" selection-start-column="25" selection-end-line="29" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -147,10 +150,8 @@
         <option value="$PROJECT_DIR$/src/index.tsx" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/src/scss/components/loader.scss" />
-        <option value="$PROJECT_DIR$/src/js/utils/firebase.ts" />
         <option value="$PROJECT_DIR$/tsconfig.json" />
         <option value="$PROJECT_DIR$/src/js/components/Login.tsx" />
-        <option value="$PROJECT_DIR$/src/js/components/NavBar.tsx" />
         <option value="$PROJECT_DIR$/src/js/components/index.ts" />
         <option value="$PROJECT_DIR$/src/js/components/admin/index.ts" />
         <option value="$PROJECT_DIR$/src/js/components/admin/forms/index.ts" />
@@ -162,9 +163,12 @@
         <option value="$PROJECT_DIR$/src/js/models/HeadToHead.ts" />
         <option value="$PROJECT_DIR$/src/js/models/Game.ts" />
         <option value="$PROJECT_DIR$/src/js/models/index.ts" />
+        <option value="$PROJECT_DIR$/src/js/utils/firebase.ts" />
+        <option value="$PROJECT_DIR$/src/js/components/NavBar.tsx" />
         <option value="$PROJECT_DIR$/src/js/components/admin/ManagePlayers.tsx" />
-        <option value="$PROJECT_DIR$/src/stores/ViewStore.ts" />
         <option value="$PROJECT_DIR$/src/js/components/admin/forms/AddPlayerForm.tsx" />
+        <option value="$PROJECT_DIR$/src/stores/ViewStore.ts" />
+        <option value="$PROJECT_DIR$/src/js/components/admin/forms/PlayerRow.tsx" />
       </list>
     </option>
   </component>
@@ -266,12 +270,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1532075346724</updated>
-      <workItem from="1532075349794" duration="9810000" />
+      <workItem from="1532075349794" duration="13739000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9810000" />
+    <option name="totallyTimeSpent" value="13739000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -359,27 +363,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/utils/firebase.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="28" column="33" lean-forward="true" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/components/Login.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/components/NavBar.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="30" column="56" lean-forward="true" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
@@ -451,13 +438,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/models/Player.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/models/HeadToHead.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -479,10 +459,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/mobx-react/index.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="16" column="75" lean-forward="true" selection-start-line="16" selection-start-column="75" selection-end-line="16" selection-end-column="169" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/components/NavBar.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="20" column="58" lean-forward="true" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/utils/firebase.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/models/Player.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/components/admin/forms/AddPlayerForm.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="27" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/components/admin/ManagePlayers.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+        <state relative-caret-position="486">
+          <caret line="27" column="49" lean-forward="true" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
@@ -491,28 +512,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/stores/ViewStore.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="24" column="34" lean-forward="true" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+        <state relative-caret-position="87">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
           <folding>
-            <element signature="e#0#50#0" expanded="true" />
+            <element signature="e#0#62#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/components/admin/forms/AddPlayerForm.tsx">
+    <entry file="file://$PROJECT_DIR$/src/js/components/admin/forms/PlayerRow.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+        <state relative-caret-position="222">
+          <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/mobx-react/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
         </state>
       </provider>
     </entry>
