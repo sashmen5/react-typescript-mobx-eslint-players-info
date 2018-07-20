@@ -1,12 +1,12 @@
 import * as firebase from 'firebase'
 
 const config = {
-    apiKey: "XXX",
-    authDomain: "your-app.firebaseapp.com",
-    databaseURL: "https://your-app.firebaseio.com",
-}
+    apiKey: "AIzaSyDhblXdTkyfYcxViqHfRIX8IUq-IfZGvxY",
+    authDomain: "rtmeplayers-info.firebaseapp.com",
+    databaseURL: "https://rtmeplayers-info.firebaseio.com",
+};
 
-firebase.initializeApp(config)
+firebase.initializeApp(config);
 
 export const ref = firebase.database().ref();
 export const firebaseAuth = firebase.auth;

@@ -19,7 +19,7 @@ const configDev = {
     ],
     publicPath: '/',
     css: ['style-loader', 'css-loader', 'sass-loader']
-}
+};
 
 const configProd = {
     app: './src/index.tsx',
@@ -28,7 +28,7 @@ const configProd = {
         fallback: "style-loader",
         use: ['css-loader', 'sass-loader']
     })
-}
+};
 
 module.exports = (env) => {
 
@@ -141,4 +141,4 @@ module.exports = (env) => {
             return plugins;
         }())
     }
-}
+};
