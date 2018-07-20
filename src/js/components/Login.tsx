@@ -1,14 +1,15 @@
 import * as React from 'react';
 import ViewStore from "../../stores/ViewStore";
+import {login} from "../utils/firebase";
+import {observer} from "mobx-react";
 
 interface LoginProps {
+    history?: any;
     viewStore: ViewStore;
 }
 
-interface LoginState {
-}
-
-class Login extends React.Component<LoginProps, LoginState> {
+@observer
+class Login extends React.Component<LoginProps, any> {
     email: HTMLInputElement;
     pw: HTMLInputElement;
 
@@ -18,7 +19,16 @@ class Login extends React.Component<LoginProps, LoginState> {
 
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log(this.email.value, this.pw.value)
+        console.log(this.email.value, this.pw.value);
+
+        const {viewStore} = this.props;
+
+        login(this.email.value, this.pw.value).then(() => {
+            this.props.history.push('/all');
+            viewStore.firebaseCheckAuth();
+        }, err => {
+            viewStore.logError(err.message);
+        });
     };
     render() {
         const {errorMessage} = this.props.viewStore;
@@ -35,7 +45,7 @@ class Login extends React.Component<LoginProps, LoginState> {
                         {
                             errorMessage !== '' && <div className="col-sm-12">
                                 <div className="row form-group">
-                                    <div id="login-alert" className="alert alert-danger">Invalid username/password</div>
+                                    <div id="login-alert" className="alert alert-danger">{errorMessage}</div>
                                 </div>
                             </div>
                         }
