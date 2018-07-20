@@ -6,6 +6,8 @@ import Admin from './components/admin/Admin';
 import {Route, Switch} from 'react-router-dom';
 import ViewStore from "../stores/ViewStore";
 import DevTools from "mobx-react-devtools";
+import {observer} from "mobx-react";
+import {withRouter} from "react-router-dom";
 
 
 interface AppProps {
@@ -16,12 +18,18 @@ interface AppState {
 
 }
 
+@observer
 class App extends React.Component<AppProps, AppState> {
 
     constructor(props){
         super(props);
-
     }
+
+    componentDidMount() {
+        const {viewStore} = this.props;
+        viewStore.firebaseCheckAuth();
+    }
+
     render(){
         const {viewStore} = this.props;
         const {isLoading} = viewStore;
@@ -64,4 +72,4 @@ class App extends React.Component<AppProps, AppState> {
     }
 }
 
-export default App;
+export default withRouter(App);
