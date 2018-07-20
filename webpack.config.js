@@ -102,7 +102,8 @@ module.exports = (env) => {
         devServer: {
             contentBase: path.join(__dirname, "dist"),
             stats: "errors-only",
-            hot: true
+            hot: true,
+            historyApiFallback: true
         },
         plugins: (function () {
             const plugins = [];

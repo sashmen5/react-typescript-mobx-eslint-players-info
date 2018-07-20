@@ -1,5 +1,5 @@
 import * as React from 'react';
-
+import {Link} from 'react-router-dom';
 const NavBar = () => {
     return (
         <nav className="navbar navbar-inverse navbar-fixed-top">
@@ -12,15 +12,15 @@ const NavBar = () => {
                             <span className="icon-bar"></span>
                             <span className="icon-bar"></span>
                         </button>
-                        <a href="" className="navbar-brand">Head To Head</a>
+                        <Link to="/" className="navbar-brand">Head To Head</Link>
                     </div>
                     <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul className="nav navbar-nav navbar-left">
-                            <li><a href="#">Admin</a></li>
+                            <li><Link to="/admin">Admin</Link></li>
                         </ul>
                         <ul className="nav navbar-nav navbar-right">
-                            <li><a href="#">Sign in</a></li>
-                            <li><a href="#">Logout</a></li>
+                            <li><Link to="/login">Sign in</Link></li>
+                            <li><Link to="/">Logout</Link></li>
                         </ul>
                     </div>
                     

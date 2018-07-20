@@ -2,17 +2,28 @@ import * as React from 'react';
 import NavBar from './components/NavBar';
 import Home from './components/Home';
 import Login from './components/Login';
-import HeadToHeadDetails from './components/HeadToHeadDetails';
 import All from './components/All';
 import Admin from './components/admin/Admin';
 
-class App extends React.Component<any, any> {
+import {Route, Switch} from 'react-router-dom';
+import ViewStore from "../stores/ViewStore";
+
+interface AppProps {
+    viewStore: ViewStore
+}
+
+interface AppState {
+
+}
+
+class App extends React.Component<AppProps, AppState> {
 
     constructor(props){
         super(props);
 
     }
     render(){
+        const {viewStore} = this.props;
         return (
             <div>
                 
@@ -26,11 +37,14 @@ class App extends React.Component<any, any> {
 
                                 {/* Main content - start */}
                                 <div className={`col-sm-12`} >
-                                    <Home />
-                                    <Login />
-                                    <HeadToHeadDetails />
-                                    <All />
-                                    <Admin />
+
+                                    <Switch>
+                                        <Route exact path="/" component={Home}/>
+                                        <Route path="/admin" component={Admin}/>
+                                        <Route path="/all" component={All}/>
+                                        <Route path="/login" component={routeProps => <Login {...routeProps} viewStore={viewStore}/>}/>
+                                        {/*<Route path="/login" component={Login}></Route>*/}
+                                    </Switch>
                                 </div>
                                 {/* Main content - end */}
 
