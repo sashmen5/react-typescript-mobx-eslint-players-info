@@ -23,7 +23,11 @@ class ViewStore {
 
     logError = (error) => {
         this.errorMessage = error;
-    }
+    };
+
+    addPlayer = (playerName: string) => {
+        console.log(playerName);
+    };
 }
 
 export default ViewStore;
