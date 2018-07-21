@@ -19,16 +19,31 @@ class ViewStore {
         this.fetchHeadToHeads();
     }
 
+    fetchGames = (headToHead: HeadToHead, fetchAll?: boolean) => {
+        const limit = fetchAll ? 99999 : 10;
+        gamesRef.orderByChild('headToHeadKey').equalTo(headToHead.key).limitToLast(limit).on('value', function(snapshot) {
+            let games = [];
+            snapshot.forEach(function(childSnapshot) {
+                const game = childSnapshot.val();
+                game.key = childSnapshot.key;
+                games.push(game);
+            });
+            this.games = games;
+        }.bind(this));
+    };
+
     fetchPlayers = () => {
-        playersRef.on('value', function (snapshot) {
+        // now read data from firebase
+        playersRef.on('value', function(snapshot) {
+
             let players = [];
-            snapshot.forEach(function (childSnapshot) {
+            snapshot.forEach(function(childSnapshot) {
                 const player = childSnapshot.val();
                 player.key = childSnapshot.key;
                 players.push(player);
             });
-
             this.players = players;
+
         }.bind(this));
     };
 
@@ -97,6 +112,17 @@ class ViewStore {
         }.bind(this));
     };
 
+    fetchHeadToHead = (key: string) => {
+        headToHeadsRef.child(key).on('value', function(snapshot) {
+
+            const headToHead = snapshot.val();
+            headToHead.key = snapshot.key;
+
+            this.selectHeadToHead(headToHead);
+
+        }.bind(this));
+    };
+
     selectHeadToHead = (headToHead: HeadToHead) => {
         console.log(headToHead.title);
         this.selectedHeadToHead = headToHead;
@@ -147,19 +173,6 @@ class ViewStore {
             console.log('draw');
         }
         return winner;
-    };
-
-    fetchGames = (headToHead: HeadToHead) => {
-        gamesRef.orderByChild('headToHeadKey').equalTo(headToHead.key).on('value', function (snapshot) {
-            let games = [];
-            snapshot.forEach(function (childSnapshot) {
-                const game = childSnapshot.val();
-                game.key = childSnapshot.key;
-                games.push(game);
-            });
-
-            this.games = games;
-        }.bind(this));
     };
 
     updateGame = (key: string, name: string, value: string) => {
