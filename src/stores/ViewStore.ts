@@ -147,7 +147,7 @@ class ViewStore {
             console.log('draw');
         }
         return winner;
-    }
+    };
 
     fetchGames = (headToHead: HeadToHead) => {
         gamesRef.orderByChild('headToHeadKey').equalTo(headToHead.key).on('value', function (snapshot) {
@@ -168,6 +168,12 @@ class ViewStore {
 
     removeGame = (key: string) => {
         gamesRef.child(key).remove();
+    };
+
+    ////------------------------
+    getPlayerName = (key: string):string => {
+        const player = this.players.length > 0 && this.players.filter(player => player.key === key);
+        return player[0].name;
     };
 
 }
