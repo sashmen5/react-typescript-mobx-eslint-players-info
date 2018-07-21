@@ -160,7 +160,15 @@ class ViewStore {
 
             this.games = games;
         }.bind(this));
-    }
+    };
+
+    updateGame = (key: string, name: string, value: string) => {
+        gamesRef.child(key).update({ [name] : value})
+    };
+
+    removeGame = (key: string) => {
+        gamesRef.child(key).remove();
+    };
 
 }
 

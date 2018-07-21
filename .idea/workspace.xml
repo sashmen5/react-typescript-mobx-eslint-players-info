@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff46e3a2-26dd-450e-89aa-21ecd87ff697" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/js/components/admin/forms/AddGameForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/admin/forms/AddGameForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/utils/firebase.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/utils/firebase.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/components/admin/ManageGames.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/admin/ManageGames.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/components/admin/forms/GameRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/admin/forms/GameRow.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/stores/ViewStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/stores/ViewStore.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -30,23 +30,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Admin.tsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/components/admin/Admin.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="24" column="57" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ManageGames.tsx" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ManageGames.tsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/js/components/admin/ManageGames.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1086">
-              <caret line="42" column="26" lean-forward="true" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
+            <state relative-caret-position="135">
+              <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -87,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ViewStore.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ViewStore.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/stores/ViewStore.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="112" lean-forward="true" selection-start-line="112" selection-end-line="112" />
+            <state relative-caret-position="438">
+              <caret line="162" column="6" lean-forward="true" selection-start-line="162" selection-start-column="6" selection-end-line="162" selection-end-column="6" />
               <folding>
                 <element signature="e#0#78#0" expanded="true" />
                 <element signature="e#1949#2253#0" />
@@ -100,6 +88,18 @@
                 <element signature="e#2857#2908#0" />
                 <element signature="e#3496#3800#0" />
                 <element signature="e#4117#4513#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameRow.tsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/components/admin/forms/GameRow.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="27" column="41" lean-forward="true" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -177,10 +177,11 @@
         <option value="$PROJECT_DIR$/src/js/components/admin/ManageHeadToHeads.tsx" />
         <option value="$PROJECT_DIR$/src/js/components/admin/forms/HeadToHeadRow.tsx" />
         <option value="$PROJECT_DIR$/src/js/components/admin/Admin.tsx" />
-        <option value="$PROJECT_DIR$/src/js/components/admin/ManageGames.tsx" />
         <option value="$PROJECT_DIR$/src/js/utils/firebase.ts" />
         <option value="$PROJECT_DIR$/src/js/components/admin/forms/AddGameForm.tsx" />
+        <option value="$PROJECT_DIR$/src/js/components/admin/forms/GameRow.tsx" />
         <option value="$PROJECT_DIR$/src/stores/ViewStore.ts" />
+        <option value="$PROJECT_DIR$/src/js/components/admin/ManageGames.tsx" />
       </list>
     </option>
   </component>
@@ -257,16 +258,15 @@
       <option name="presentableId" value="Default" />
       <updated>1532075346724</updated>
       <workItem from="1532075349794" duration="16521000" />
-      <workItem from="1532164764761" duration="4318000" />
+      <workItem from="1532164764761" duration="4786000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20839000" />
+    <option name="totallyTimeSpent" value="21307000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TypeScript" order="7" />
       <window_info content_ui="combo" id="Project" order="0" weight="0.24973656" />
@@ -277,7 +277,7 @@
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32897604" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32897604" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -550,16 +550,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/components/admin/ManageGames.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1086">
-          <caret line="42" column="26" lean-forward="true" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/components/index.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="27">
@@ -603,8 +593,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/stores/ViewStore.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="112" lean-forward="true" selection-start-line="112" selection-end-line="112" />
+        <state relative-caret-position="438">
+          <caret line="162" column="6" lean-forward="true" selection-start-line="162" selection-start-column="6" selection-end-line="162" selection-end-column="6" />
           <folding>
             <element signature="e#0#78#0" expanded="true" />
             <element signature="e#1949#2253#0" />
@@ -613,6 +603,26 @@
             <element signature="e#2857#2908#0" />
             <element signature="e#3496#3800#0" />
             <element signature="e#4117#4513#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/components/admin/forms/GameRow.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="27" column="41" lean-forward="true" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/components/admin/ManageGames.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
