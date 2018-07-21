@@ -19,7 +19,7 @@ interface AddGameFormState {
 class AddGameForm extends React.Component<AddGameFormProps, AddGameFormState> {
 
     constructor(props){
-        super(props);
+        super(props)
         this.state = {
             headToHeadKey: '',
             homeTeamName: '',
@@ -31,6 +31,17 @@ class AddGameForm extends React.Component<AddGameFormProps, AddGameFormState> {
 
     handleInputChange = (e) => {
         const {name, value} = e.target;
+        const {viewStore} = this.props;
+
+        //get the new selected Head To Head - return an array
+        const selectedHeadToHead = viewStore.headToHeads.length > 0 && viewStore.headToHeads.filter(headToHead => headToHead.key === value);
+
+        if(name === 'headToHeadKey'){
+
+            //make the new selected Head To Head active in the viewStore
+            viewStore.selectHeadToHead(selectedHeadToHead[0]);
+        }
+
         this.setState({
             [name]: value
         })
@@ -39,9 +50,9 @@ class AddGameForm extends React.Component<AddGameFormProps, AddGameFormState> {
     handleSubmit = (e) => {
         e.preventDefault();
         const {viewStore} = this.props;
-        const {headToHeadKey, homeTeamName, awayTeamName, homeTeamGoals, awayTeamGoals} = this.state;
+        const {homeTeamName, awayTeamName, homeTeamGoals, awayTeamGoals} = this.state;
 
-        console.log(headToHeadKey, homeTeamName, awayTeamName, homeTeamGoals, awayTeamGoals);
+        viewStore.addGame(homeTeamName, awayTeamName, homeTeamGoals, awayTeamGoals);
 
         // clear form
         this.setState({
@@ -54,7 +65,8 @@ class AddGameForm extends React.Component<AddGameFormProps, AddGameFormState> {
     };
 
     render() {
-        const {headToHeadKey, homeTeamName, awayTeamName, homeTeamGoals, awayTeamGoals} = this.state;
+        const {headToHeads} = this.props.viewStore;
+        const {homeTeamName, awayTeamName, homeTeamGoals, awayTeamGoals} = this.state;
         return (
             <div className={`form-add-game`}>
                 <div className="panel panel-success">
@@ -65,41 +77,26 @@ class AddGameForm extends React.Component<AddGameFormProps, AddGameFormState> {
                                 <div className="col-sm-12">
                                     <div className="form-group">
                                         <label htmlFor="headToHead">Head To Head</label>
-                                        <select
-                                            className="form-control"
-                                            id="headToHeadKey"
-                                            name="headToHeadKey"
-                                            onChange={(e) => this.handleInputChange(e) }>
-                                            <option value='1'>Head To Head 1</option>
-                                            <option value='2'>Head To Head 2</option>
-                                            <option value='3'>Head To Head 3</option>
+                                        <select className="form-control" id="headToHeadKey" name="headToHeadKey" onChange={(e) => this.handleInputChange(e) }>
+                                            {
+                                                headToHeads.length > 0 && headToHeads.map(headToHead => {
+                                                    const {key, title} = headToHead;
+                                                    return <option key={key} value={key}>{title}</option>
+                                                })
+                                            }
                                         </select>
                                     </div>
                                 </div>
                                 <div className="col-sm-12 col-md-6">
                                     <div className="form-group">
                                         <label htmlFor="homeTeamName">{`Home Team`}</label>
-                                        <input
-                                            type="text"
-                                            className="form-control"
-                                            id="homeTeamName"
-                                            name="homeTeamName"
-                                            placeholder="Arsenal"
-                                            value={homeTeamName}
-                                            onChange={(e) => this.handleInputChange(e) }/>
+                                        <input type="text" className="form-control" id="homeTeamName" name="homeTeamName" placeholder="Arsenal" value={homeTeamName} onChange={(e) => this.handleInputChange(e) }/>
                                     </div>
                                 </div>
                                 <div className="col-sm-12 col-md-6">
                                     <div className="form-group">
                                         <label htmlFor="awayTeamName">{`Away Team`}</label>
-                                        <input
-                                            type="text"
-                                            className="form-control"
-                                            id="awayTeamName"
-                                            name="awayTeamName"
-                                            placeholder="Real Madrid"
-                                            value={awayTeamName}
-                                            onChange={(e) => this.handleInputChange(e) } />
+                                        <input type="text" className="form-control" id="awayTeamName" name="awayTeamName" placeholder="Real Madrid" value={awayTeamName} onChange={(e) => this.handleInputChange(e) } />
                                     </div>
                                 </div>
                                 <div className="col-sm-12 col-md-12">
@@ -110,25 +107,13 @@ class AddGameForm extends React.Component<AddGameFormProps, AddGameFormState> {
                                         <div className="col-sm-12 col-md-6">
                                             <div className="form-group">
                                                 <label htmlFor="homeTeamGoals">{`Home Team`}</label>
-                                                <input type="number"
-                                                       className="form-control"
-                                                       id="homeTeamGoals"
-                                                       name="homeTeamGoals"
-                                                       placeholder="0"
-                                                       value={homeTeamGoals}
-                                                       onChange={(e) => this.handleInputChange(e) } />
+                                                <input type="number" className="form-control" id="homeTeamGoals" name="homeTeamGoals" placeholder="0" value={homeTeamGoals} onChange={(e) => this.handleInputChange(e) } />
                                             </div>
                                         </div>
                                         <div className="col-sm-12 col-md-6">
                                             <div className="form-group">
                                                 <label htmlFor="awayTeamGoals">{`Away Team`}</label>
-                                                <input type="number"
-                                                       className="form-control"
-                                                       id="awayTeamGoals"
-                                                       name="awayTeamGoals"
-                                                       placeholder="0"
-                                                       value={awayTeamGoals}
-                                                       onChange={(e) => this.handleInputChange(e) } />
+                                                <input type="number" className="form-control" id="awayTeamGoals" name="awayTeamGoals" placeholder="0" value={awayTeamGoals} onChange={(e) => this.handleInputChange(e) } />
                                             </div>
                                         </div>
                                     </div>

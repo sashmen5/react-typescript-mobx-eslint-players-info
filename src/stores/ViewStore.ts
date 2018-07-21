@@ -1,4 +1,4 @@
-import {firebaseAuth, headToHeadsRef, playersRef} from "../js/utils/firebase";
+import {firebaseAuth, headToHeadsRef, playersRef, gamesRef} from "../js/utils/firebase";
 import {observable} from "mobx";
 import Player from "../js/models/Player";
 import HeadToHead from "../js/models/HeadToHead";
@@ -100,7 +100,7 @@ class ViewStore {
     selectHeadToHead = (headToHead: HeadToHead) => {
         console.log(headToHead.title);
         this.selectedHeadToHead = headToHead;
-        // this.fetchGames(headToHead);
+        this.fetchGames(headToHead);
     };
 
     updateHeadToHeads = (key: string, name: string, value: string) => {
@@ -110,6 +110,57 @@ class ViewStore {
     removeHeadToHeads = (key: string) => {
         headToHeadsRef.child(key).remove();
     };
+
+
+    //CRUD - Games
+    addGame = (homeTeamName: string, awayTeamName: string, homeTeamGoals: number, awayTeamGoals: number) => {
+        const {key, playerA, playerB} = this.selectedHeadToHead;
+        const winnerKey = this.getWinner(playerA, playerB, homeTeamGoals, awayTeamGoals);
+
+        const pA = this.players.length > 0 && this.players.filter(player => player.key === playerA);
+        const pB = this.players.length > 0 && this.players.filter(player => player.key === playerB);
+
+        const gameKey = gamesRef.push().key;
+        gamesRef.child(gameKey).set({
+            headToHeadKey: key,
+            homeTeamKey: playerA,
+            homeTeamName: homeTeamName !== '' ? homeTeamName : pA[0].name,
+            homeTeamGoals: homeTeamGoals,
+            awayTeamKey: playerB,
+            awayTeamName: awayTeamName !== '' ? awayTeamName : pB[0].name,
+            awayTeamGoals: awayTeamGoals,
+            date: Date.now(),
+            winnerKey: winnerKey,
+        });
+    };
+
+    getWinner = (playerA: string, playerB: string, homeTeamGoals: number, awayTeamGoals: number) => {
+        let winner;
+        if(homeTeamGoals > awayTeamGoals){
+            winner = playerA;
+            console.log('playerA');
+        } else if (homeTeamGoals < awayTeamGoals) {
+            winner = playerB;
+            console.log('playerB');
+        } else if (homeTeamGoals === awayTeamGoals) {
+            winner = '';
+            console.log('draw');
+        }
+        return winner;
+    }
+
+    fetchGames = (headToHead: HeadToHead) => {
+        gamesRef.orderByChild('headToHeadKey').equalTo(headToHead.key).on('value', function (snapshot) {
+            let games = [];
+            snapshot.forEach(function (childSnapshot) {
+                const game = childSnapshot.val();
+                game.key = childSnapshot.key;
+                games.push(game);
+            });
+
+            this.games = games;
+        }.bind(this));
+    }
 
 }
 

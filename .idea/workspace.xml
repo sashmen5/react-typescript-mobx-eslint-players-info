@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff46e3a2-26dd-450e-89aa-21ecd87ff697" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/components/admin/Admin.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/admin/Admin.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/components/admin/ManageGames.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/admin/ManageGames.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/components/admin/ManageHeadToHeads.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/admin/ManageHeadToHeads.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/components/admin/forms/AddGameForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/admin/forms/AddGameForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/components/admin/forms/HeadToHeadRow.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/admin/forms/HeadToHeadRow.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/utils/firebase.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/utils/firebase.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/stores/ViewStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/stores/ViewStore.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -70,14 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HeadToHeadRow.tsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/js/components/admin/forms/HeadToHeadRow.tsx">
+      <file leaf-file-name="firebase.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/utils/firebase.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="62" column="26" lean-forward="true" selection-start-line="62" selection-start-column="26" selection-end-line="62" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="459">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
             </state>
           </provider>
         </entry>
@@ -94,14 +87,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ViewStore.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ViewStore.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/stores/ViewStore.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="6" column="17" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+            <state relative-caret-position="114">
+              <caret line="112" lean-forward="true" selection-start-line="112" selection-end-line="112" />
               <folding>
                 <element signature="e#0#78#0" expanded="true" />
+                <element signature="e#1949#2253#0" />
+                <element signature="e#2285#2677#0" />
+                <element signature="e#2750#2813#0" />
+                <element signature="e#2857#2908#0" />
+                <element signature="e#3496#3800#0" />
+                <element signature="e#4117#4513#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Game.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/models/Game.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="2" selection-start-line="2" selection-end-line="10" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -115,11 +123,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddGameForm.tsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AddGameForm.tsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/components/admin/forms/AddGameForm.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="128" column="70" lean-forward="true" selection-start-line="128" selection-start-column="70" selection-end-line="128" selection-end-column="70" />
+            <state relative-caret-position="108">
+              <caret line="47" column="6" lean-forward="true" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -165,14 +173,14 @@
         <option value="$PROJECT_DIR$/src/js/components/admin/ManagePlayers.tsx" />
         <option value="$PROJECT_DIR$/src/js/components/admin/forms/AddPlayerForm.tsx" />
         <option value="$PROJECT_DIR$/src/js/components/admin/forms/PlayerRow.tsx" />
-        <option value="$PROJECT_DIR$/src/js/utils/firebase.ts" />
         <option value="$PROJECT_DIR$/src/js/components/admin/forms/AddHeadToHeadForm.tsx" />
         <option value="$PROJECT_DIR$/src/js/components/admin/ManageHeadToHeads.tsx" />
         <option value="$PROJECT_DIR$/src/js/components/admin/forms/HeadToHeadRow.tsx" />
         <option value="$PROJECT_DIR$/src/js/components/admin/Admin.tsx" />
         <option value="$PROJECT_DIR$/src/js/components/admin/ManageGames.tsx" />
-        <option value="$PROJECT_DIR$/src/stores/ViewStore.ts" />
+        <option value="$PROJECT_DIR$/src/js/utils/firebase.ts" />
         <option value="$PROJECT_DIR$/src/js/components/admin/forms/AddGameForm.tsx" />
+        <option value="$PROJECT_DIR$/src/stores/ViewStore.ts" />
       </list>
     </option>
   </component>
@@ -197,7 +205,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="439" />
     <option name="y" value="2" />
     <option name="width" value="974" />
@@ -249,12 +257,12 @@
       <option name="presentableId" value="Default" />
       <updated>1532075346724</updated>
       <workItem from="1532075349794" duration="16521000" />
-      <workItem from="1532164764761" duration="2504000" />
+      <workItem from="1532164764761" duration="4318000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19025000" />
+    <option name="totallyTimeSpent" value="20839000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -269,7 +277,7 @@
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32897604" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32897604" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -444,13 +452,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/models/Game.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/models/index.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -496,13 +497,6 @@
           <folding>
             <element signature="e#0#31#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/utils/firebase.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="16" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -573,16 +567,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/stores/ViewStore.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="6" column="17" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#78#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/components/admin/forms/AddHeadToHeadForm.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-54">
@@ -593,12 +577,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/utils/firebase.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/models/Game.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" selection-start-line="2" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/components/admin/forms/AddGameForm.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="128" column="70" lean-forward="true" selection-start-line="128" selection-start-column="70" selection-end-line="128" selection-end-column="70" />
+        <state relative-caret-position="108">
+          <caret line="47" column="6" lean-forward="true" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/stores/ViewStore.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="112" lean-forward="true" selection-start-line="112" selection-end-line="112" />
+          <folding>
+            <element signature="e#0#78#0" expanded="true" />
+            <element signature="e#1949#2253#0" />
+            <element signature="e#2285#2677#0" />
+            <element signature="e#2750#2813#0" />
+            <element signature="e#2857#2908#0" />
+            <element signature="e#3496#3800#0" />
+            <element signature="e#4117#4513#0" />
           </folding>
         </state>
       </provider>
