@@ -2,6 +2,7 @@ import {firebaseAuth, headToHeadsRef, playersRef} from "../js/utils/firebase";
 import {observable} from "mobx";
 import Player from "../js/models/Player";
 import HeadToHead from "../js/models/HeadToHead";
+import Game from "../js/models/Game";
 
 class ViewStore {
     @observable authed: boolean = false;
@@ -9,7 +10,9 @@ class ViewStore {
     @observable user: any = null;
     @observable errorMessage: string = '';
     @observable players: Player[] = [];
+    @observable games: Game[] = [];
     @observable headToHeads: HeadToHead[] = [];
+    @observable selectedHeadToHead: HeadToHead = null;
 
     constructor() {
         this.fetchPlayers();
@@ -54,7 +57,7 @@ class ViewStore {
     };
 
     updatePlayer = (key: string, name: string) => {
-        playersRef.child(key).set({name: name});
+        playersRef.child(key).update({name: name});
     };
 
     removePlayer = (key: string) => {
@@ -80,17 +83,32 @@ class ViewStore {
 
     fetchHeadToHeads = () => {
         headToHeadsRef.on('value', function (snapshot) {
-            debugger
             let headToHeads = [];
             snapshot.forEach(function (childSnapshot) {
-                debugger
                 const headToHead = childSnapshot.val();
                 headToHead.key = childSnapshot.key;
                 headToHeads.push(headToHead);
             });
 
             this.headToHeads = headToHeads;
+            if (this.headToHeads.length > 0 && this.selectedHeadToHead === null) {
+                this.selectHeadToHead(this.headToHeads[0])
+            }
         }.bind(this));
+    };
+
+    selectHeadToHead = (headToHead: HeadToHead) => {
+        console.log(headToHead.title);
+        this.selectedHeadToHead = headToHead;
+        // this.fetchGames(headToHead);
+    };
+
+    updateHeadToHeads = (key: string, name: string, value: string) => {
+        headToHeadsRef.child(key).update({[name]: value});
+    };
+
+    removeHeadToHeads = (key: string) => {
+        headToHeadsRef.child(key).remove();
     };
 
 }

@@ -33,8 +33,12 @@ const ManageHeadToHeads = (props: ManageHeadToHeadsProps) => {
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <HeadToHeadRow />
-                                <tr><td colSpan={5}><p>Create your first head to head above.</p></td></tr>
+                                {
+                                    headToHeads.length > 0 ? headToHeads.map((headToHead, index) => {
+                                        const {key} = headToHead;
+                                        return <HeadToHeadRow key={key} headToHead={headToHead} index={index}/>
+                                    }) : <tr><td colSpan={5}><p>Create your first head to head above.</p></td></tr>
+                                }
                                 </tbody>
                             </table>
                         </div>

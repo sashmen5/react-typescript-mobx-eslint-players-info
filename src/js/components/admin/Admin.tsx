@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import {ManageHeadToHeads, ManagePlayers} from '.'
+import {ManageGames, ManageHeadToHeads, ManagePlayers} from '.'
 import ViewStore from "../../../stores/ViewStore";
 import {inject, observer} from "mobx-react";
 
@@ -13,13 +13,16 @@ interface AdminProps {
 class Admin extends React.Component<AdminProps, any> {
     render() {
         const {viewStore} = this.props;
-        const {players} = viewStore;
+        const {players, headToHeads} = viewStore;
         return (
             <div className="col-sm-8">
 
                 <ManagePlayers/>
                 {
                     players.length > 1 &&  <ManageHeadToHeads/>
+                }
+                {
+                    headToHeads.length > 1 &&  <ManageGames/>
                 }
 
             </div>
