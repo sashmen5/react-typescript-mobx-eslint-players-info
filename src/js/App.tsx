@@ -8,6 +8,7 @@ import ViewStore from "../stores/ViewStore";
 import DevTools from "mobx-react-devtools";
 import {observer} from "mobx-react";
 import {withRouter} from "react-router-dom";
+import {RequireAuth} from "./components/routes";
 
 
 interface AppProps {
@@ -51,8 +52,8 @@ class App extends React.Component<AppProps, AppState> {
 
                                             <Switch>
                                                 <Route exact path="/" component={Home}/>
-                                                <Route path="/admin" component={Admin}/>
-                                                <Route path="/all" component={All}/>
+                                                <Route path="/admin" component={RequireAuth(Admin)}/>
+                                                <Route path="/all" component={RequireAuth(All)}/>
                                                 <Route path="/login" component={routeProps => <Login {...routeProps} viewStore={viewStore}/>}/>
                                                 {/*<Route path="/login" component={Login}></Route>*/}
                                             </Switch>
