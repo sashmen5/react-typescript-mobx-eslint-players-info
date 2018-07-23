@@ -19,7 +19,7 @@ interface AddGameFormState {
 class AddGameForm extends React.Component<AddGameFormProps, AddGameFormState> {
 
     constructor(props){
-        super(props)
+        super(props);
         this.state = {
             headToHeadKey: '',
             homeTeamName: '',

@@ -15,9 +15,14 @@ class ViewStore {
     @observable selectedHeadToHead: HeadToHead = null;
 
     constructor() {
+
+    }
+
+    fetchData = () => {
+        this.errorMessage = '';
         this.fetchPlayers();
         this.fetchHeadToHeads();
-    }
+    };
 
     fetchGames = (headToHead: HeadToHead, fetchAll?: boolean) => {
         const limit = fetchAll ? 99999 : 10;
@@ -113,12 +118,18 @@ class ViewStore {
     };
 
     fetchHeadToHead = (key: string) => {
+        this.fetchData();
         headToHeadsRef.child(key).on('value', function(snapshot) {
 
-            const headToHead = snapshot.val();
-            headToHead.key = snapshot.key;
+            if (!!snapshot.val()) {
+                const headToHead = snapshot.val();
+                headToHead.key = snapshot.key;
+                this.selectHeadToHead(headToHead);
+            } else {
+                //TODO: this is not workings
+                this.errorMessage = "This head to head does not exist";
+            }
 
-            this.selectHeadToHead(headToHead);
 
         }.bind(this));
     };

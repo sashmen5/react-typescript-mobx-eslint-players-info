@@ -11,6 +11,9 @@ interface AdminProps {
 @inject('viewStore')
 @observer
 class Admin extends React.Component<AdminProps, any> {
+    componentDidMount() {
+        this.props.viewStore.fetchData();
+    }
     render() {
         const {viewStore} = this.props;
         const {players, headToHeads} = viewStore;

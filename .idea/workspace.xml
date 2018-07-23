@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ff46e3a2-26dd-450e-89aa-21ecd87ff697" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/components/Games.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/Games.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/components/All.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/All.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/js/components/HeadToHeadDetails.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/HeadToHeadDetails.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/components/admin/Admin.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/admin/Admin.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/components/admin/forms/AddGameForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/admin/forms/AddGameForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/stores/ViewStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/stores/ViewStore.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -34,8 +36,8 @@
       <file leaf-file-name="All.tsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/components/All.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="25" column="41" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+            <state relative-caret-position="352">
+              <caret line="16" column="55" lean-forward="true" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -46,11 +48,34 @@
       <file leaf-file-name="HeadToHeadDetails.tsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/js/components/HeadToHeadDetails.tsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+            <state relative-caret-position="330">
+              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
-                <element signature="e#2039#2101#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddGameForm.tsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/components/admin/forms/AddGameForm.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2424">
+              <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Login.tsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/components/Login.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="81">
+              <caret line="45" selection-start-line="45" selection-end-line="49" selection-end-column="34" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -68,8 +93,20 @@
       <file leaf-file-name="ViewStore.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/stores/ViewStore.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="654">
-              <caret line="123" column="6" selection-start-line="123" selection-start-column="6" selection-end-line="123" selection-end-column="6" />
+            <state relative-caret-position="378">
+              <caret line="120" column="25" selection-start-line="120" selection-start-column="25" selection-end-line="120" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Admin.tsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/js/components/admin/Admin.tsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="14" column="41" lean-forward="true" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -126,9 +163,7 @@
         <option value="$PROJECT_DIR$/src/js/components/admin/forms/AddHeadToHeadForm.tsx" />
         <option value="$PROJECT_DIR$/src/js/components/admin/ManageHeadToHeads.tsx" />
         <option value="$PROJECT_DIR$/src/js/components/admin/forms/HeadToHeadRow.tsx" />
-        <option value="$PROJECT_DIR$/src/js/components/admin/Admin.tsx" />
         <option value="$PROJECT_DIR$/src/js/utils/firebase.ts" />
-        <option value="$PROJECT_DIR$/src/js/components/admin/forms/AddGameForm.tsx" />
         <option value="$PROJECT_DIR$/src/js/components/admin/forms/GameRow.tsx" />
         <option value="$PROJECT_DIR$/src/js/components/admin/ManageGames.tsx" />
         <option value="$PROJECT_DIR$/src/js/components/routes/UnAuthorised.tsx.ts" />
@@ -138,8 +173,10 @@
         <option value="$PROJECT_DIR$/src/js/components/routes/RequireAuth.tsx" />
         <option value="$PROJECT_DIR$/src/js/components/NavBar.tsx" />
         <option value="$PROJECT_DIR$/src/js/App.tsx" />
-        <option value="$PROJECT_DIR$/src/js/components/All.tsx" />
         <option value="$PROJECT_DIR$/src/js/components/Games.tsx" />
+        <option value="$PROJECT_DIR$/src/js/components/admin/Admin.tsx" />
+        <option value="$PROJECT_DIR$/src/js/components/All.tsx" />
+        <option value="$PROJECT_DIR$/src/js/components/admin/forms/AddGameForm.tsx" />
         <option value="$PROJECT_DIR$/src/stores/ViewStore.ts" />
         <option value="$PROJECT_DIR$/src/js/components/HeadToHeadDetails.tsx" />
       </list>
@@ -166,7 +203,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="439" />
     <option name="y" value="2" />
     <option name="width" value="974" />
@@ -220,12 +257,13 @@
       <workItem from="1532075349794" duration="16521000" />
       <workItem from="1532164764761" duration="5570000" />
       <workItem from="1532195486051" duration="3006000" />
-      <workItem from="1532198520387" duration="562000" />
+      <workItem from="1532198520387" duration="680000" />
+      <workItem from="1532361627623" duration="1315000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25659000" />
+    <option name="totallyTimeSpent" value="27092000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -240,7 +278,7 @@
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32897604" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.36165577" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -503,16 +541,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/components/admin/Admin.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="24" column="57" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/components/admin/ManageHeadToHeads.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
@@ -557,16 +585,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/components/admin/forms/AddGameForm.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="47" column="6" lean-forward="true" selection-start-line="47" selection-start-column="6" selection-end-line="47" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/components/admin/ManageGames.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
@@ -588,16 +606,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/components/Login.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="26" column="44" lean-forward="true" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -645,16 +653,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/components/All.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="25" column="41" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/App.tsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1161">
@@ -672,20 +670,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/components/Login.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="45" selection-start-line="45" selection-end-line="49" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/components/admin/Admin.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="14" column="41" lean-forward="true" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/components/All.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="55" lean-forward="true" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/js/components/admin/forms/AddGameForm.tsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2424">
+          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/stores/ViewStore.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="654">
-          <caret line="123" column="6" selection-start-line="123" selection-start-column="6" selection-end-line="123" selection-end-column="6" />
+        <state relative-caret-position="378">
+          <caret line="120" column="25" selection-start-line="120" selection-start-column="25" selection-end-line="120" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/components/HeadToHeadDetails.tsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+        <state relative-caret-position="330">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
-            <element signature="e#2039#2101#0" />
           </folding>
         </state>
       </provider>
