@@ -157,6 +157,8 @@ class ViewStore {
         const pA = this.players.length > 0 && this.players.filter(player => player.key === playerA);
         const pB = this.players.length > 0 && this.players.filter(player => player.key === playerB);
 
+        this.updateTotalScore(winnerKey, 'addGame');
+
         const gameKey = gamesRef.push().key;
         gamesRef.child(gameKey).set({
             headToHeadKey: key,
@@ -191,6 +193,8 @@ class ViewStore {
     };
 
     removeGame = (key: string) => {
+        const game = this.games.filter(game => game.key === key);
+        this.updateTotalScore(game[0].winnerKey, 'removeGame');
         gamesRef.child(key).remove();
     };
 
@@ -199,6 +203,48 @@ class ViewStore {
         const player = this.players.length > 0 && this.players.filter(player => player.key === key);
         return player[0].name;
     };
+
+    updateTotalScore = (winnerKey: string, action: string) => {
+        const {key, playerAWinCount, drawsCount, playerBWinCount, playerA, playerB} = this.selectedHeadToHead;
+        switch (action) {
+            case 'addGame':
+
+                if(winnerKey === playerA){
+                    headToHeadsRef.child(key).update({"playerAWinCount": playerAWinCount+1}, function(){
+                        this.selectedHeadToHead.playerAWinCount = playerAWinCount+1;
+                    }.bind(this))
+                } else if (winnerKey === playerB) {
+                    headToHeadsRef.child(key).update({"playerBWinCount": playerBWinCount+1}, function(){
+                        this.selectedHeadToHead.playerBWinCount = playerBWinCount+1;
+                    }.bind(this))
+                } else if (winnerKey === '') {
+                    headToHeadsRef.child(key).update({"drawsCount": drawsCount+1}, function(){
+                        this.selectedHeadToHead.drawsCount = drawsCount+1;
+                    }.bind(this))
+                }
+
+                break;
+            case 'removeGame':
+
+                if(winnerKey === playerA){
+                    headToHeadsRef.child(key).update({"playerAWinCount": playerAWinCount-1}, function(){
+                        this.selectedHeadToHead.playerAWinCount = playerAWinCount-1;
+                    }.bind(this))
+                } else if (winnerKey === playerB) {
+                    headToHeadsRef.child(key).update({"playerBWinCount": playerBWinCount-1}, function(){
+                        this.selectedHeadToHead.playerBWinCount = playerBWinCount-1;
+                    }.bind(this))
+                } else if (winnerKey === '') {
+                    headToHeadsRef.child(key).update({"drawsCount": drawsCount-1}, function(){
+                        this.selectedHeadToHead.drawsCount = drawsCount-1;
+                    }.bind(this))
+                }
+                break;
+
+            default:
+                break;
+        }
+    }
 
 }
 
